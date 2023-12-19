@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Blog</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 56px; /* Tamaño de la barra de navegación */
+    }
+    .sidebar {
+      position: fixed;
+      top: 56px;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 20px;
+      overflow-x: hidden;
+      overflow-y: auto; /* Scrollable */
+      background-color: #f8f9fa;
+      height: 100vh; /* Ajuste para que el menú izquierdo ocupe toda la altura de la pantalla */
+    }
+    .content {
+      margin-left: 240px; /* Ancho de la barra lateral */
+      height: 100vh; /* Ajuste para que el contenido dinámico ocupe toda la altura de la pantalla */
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Mi Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Barra lateral -->
+    <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="how-to-act.html" target="content-frame">How to Act in an Emergency</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="childhood.html" target="content-frame">My Childhood</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="habits.html" target="content-frame">What are my healthy habits</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profession.html" target="content-frame">What is your plan for the future as a professional</a>
+        </li>
+        <!-- Agrega más elementos del menú según sea necesario -->
+      </ul>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4 content">
+      <iframe name="content-frame" frameborder="0"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS y dependencias -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
